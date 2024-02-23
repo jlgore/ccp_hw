@@ -1,0 +1,26 @@
+{
+  "name": "aws-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "sst bind astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sst:deploy": "sst deploy",
+    "sst:dev": "sst dev"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.1",
+    "astro": "^4.4.2"
+  },
+  "devDependencies": {
+    "sst": "^2.40.3",
+    "aws-cdk-lib": "2.124.0",
+    "constructs": "10.3.0",
+    "astro-sst": "^2.40.3"
+  }
+}
