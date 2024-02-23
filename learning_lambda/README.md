@@ -62,3 +62,8 @@ Once we are happy with how our code looks we can deploy it to AWS and call it.
 4. Inside the same folder we need to run the following command: `bunx sst deploy`. Your output may look slightly different than mine, but if it is successful you will get an output of your APIs URL.
 ![image](giffy/sst-deploy.gif)
 5. You can curl your endpoint or visit it in the browser to see the full output! Once you are done with the lab, you can use the command `bunx sst remove` to delete the resources your created.
+
+### Finished? Want More? Checkout some AWeSome AWS Workshops:
+
+* [Lambda Serverless Image Processing Workshop](https://github.com/aws-samples/aws-serverless-workshops/tree/master/ImageProcessing)
+* [CI/CD for Lambda/Serverless Applications](https://cicd.serverlessworkshops.io/)

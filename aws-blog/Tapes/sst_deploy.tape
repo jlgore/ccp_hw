@@ -1,5 +1,5 @@
 # Where should we write the GIF?
-Output sst-deploy-site.gif
+Output giffy/sst-deploy-site.gif
 
 # Set up a 1200x600 terminal with 46px font.
 Set FontSize 26
@@ -15,7 +15,7 @@ Sleep 500ms
 # Run the command by pressing enter.
 Enter 1
 
-Sleep 35s
+Sleep 65s
 
 
 
