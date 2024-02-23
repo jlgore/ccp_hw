@@ -3,7 +3,7 @@
 Today we are going to be creating our own blog on AWS hosted on S3 (AWS Simple Storage Service) and Cloudfront (a content delivery network).
 
 Inside this folder we have a Javascript website using the web framework [Astro](https://astro.build). We have a simple blog template here for our use. In `src/content/blog` there are a few
-blog examples that we can adjust with our own content. We also have pages we can edit in `src/pages/`. The `src/pages/index.astro` looks like this:
+blog examples that we can adjust with our own content. We also have pages we can edit in `src/pages/`. The main page of our site is located in `src/pages/index.astro` and looks like this:
 
 ```
 <snip>
@@ -24,16 +24,20 @@ blog examples that we can adjust with our own content. We also have pages we can
 
 ### Requirements for this Activity:
 
-    * an AWS Account w/Access Keys (if deploying from a laptop or VM not in AWS)
-       * How to create AWS Access Keys: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
-       *  How to login to AWS CLI with your new Keys: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html OR
-    * an AWS Account w/Cloud9 IDE. -- How to spin up a Cloud9 IDE: https://docs.aws.amazon.com/cloud9/latest/user-guide/setup-express.html
+* an AWS Account w/Access Keys (if deploying from a laptop or VM not in AWS)
+	* How to create AWS Access Keys: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+    *  How to login to AWS CLI with your new Keys: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html 
+	
+*OR*
+
+* an AWS Account w/Cloud9 IDE. -- How to spin up a Cloud9 IDE: https://docs.aws.amazon.com/cloud9/latest/user-guide/setup-express.html
 
 ⚠️ IF YOU ARE A CLOUD9 USER MAKE A NEW CLOUD9, do not use the Docker Cloud9. Delete that and create a new CLOUD9. ⚠️ 
-⚠️ IF YOU ARE A CLOUD9 USER the only ports that will forward to the Cloud9 IDE are 8080, 8081, 8082. You must change the default listen port of Astro example: ![Astro Config Options]) ⚠️ 
+
+⚠️ IF YOU ARE A CLOUD9 USER the only ports that will forward to the Cloud9 IDE are 8080, 8081, 8082. You must change the default listen port of Astro example: ![Astro Config Options](https://catalog.workshops.aws/terraform101/en-US) ⚠️ 
 
 
-We can put any valid HTML in this document and see it change by running the following command:
+#### We can put any valid HTML in this document and see it change by running the following command:
 
 `bun install && bunx astro dev`
 
@@ -49,11 +53,17 @@ Congrats, Astronaut! Make changes to `src/pages/index.astro` and `src/content/bl
 
 ### Ready to Blast Off?
 
+Once you have edited your main page and written a blog post or whatever you want to do, we can deploy our site to AWS. We will again be using [Serverless Stack](https://sst.dev) and the Bun NodeJS runtime is required. If you have not installed Bun in there are instructions in the `learning_lambda` directory of this repo. 
 
+#### Time to Deploy:
 
+Deploy to AWS by running the following command: `bunx sst deploy`. Your output may vary from the gif below, but if successful you will get a Cloudfront URL to access your site.
 
+![image](giffy/sst-deploy-site.gif)
 
+### Going Further:
 
+You can add domain names, certificates, and more using the SST framework. If you would like to learn more about what SST can do for you please check out the following tutorial: [here](https://docs.sst.dev/start/astro).
 
 # Astro Starter Kit: Blog
 
